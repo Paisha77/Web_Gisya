@@ -1,0 +1,5 @@
+html {
+    scroll-behavior: smooth;
+    /* Memberi jarak agar judul tidak tertutup oleh navbar (karena navbar Anda sticky) */
+    scroll-padding-top: 100px; 
+}

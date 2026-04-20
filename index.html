@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gisya Sekar| Portfolio Modern</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #00b4d8;
+            --light-blue: #caf0f8;
+            --dark-blue: #03045e;
+            --bg-gray: #f8f9fa;
+            --white: #ffffff;
+            --text-gray: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-blue);
+        }
+
+        .btn-contact-top {
+            background: var(--primary-blue);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            align-items: center;
+            border-left: 10px solid var(--primary-blue);
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 15px;
+            background: var(--light-blue);
+            border: 5px solid var(--light-blue);
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            background: var(--light-blue);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+
+        .info-item i {
+            color: var(--primary-blue);
+            margin-right: 5px;
+        }
+
+        /* Grid Layout for Sections */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .section-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .section-title {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--light-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Card List style */
+        .history-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: var(--bg-gray);
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .history-item:hover {
+            transform: translateX(10px);
+            background: var(--light-blue);
+        }
+
+        .icon-box {
+            background: var(--primary-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: var(--light-blue);
+            color: var(--dark-blue);
+            padding: 8px 15px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-card, .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Gisya</div>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#pendidikan">Pendidikan</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+        </ul>
+        <a href="#" class="btn-contact-top">Hubungi Saya</a>
+    </nav>
+
+    <div class="container" id="beranda">
+        <section class="hero-card">
+            <img src="Profile.jpeg" alt="Profile" class="profile-img" width="300" length="400">
+            <div class="hero-text">
+                <p style="color: var(--primary-blue); font-weight: bold;">Halo, Saya</p>
+                <h1>Gisya Sekar Faliha</h1>
+                <p>Saya merupakan mahasiswa jurusan Ekonomi di Universitas Gunadarma yang memiliki ketertarikan dalam berbagi cerita dan pengalaman hidup. Melalui website ini, saya ingin membagikan berbagai kisah seputar perjalanan perkuliahan, tantangan yang saya hadapi, serta momen-momen berkesan yang saya alami. Harapannya, cerita-cerita tersebut dapat memberikan inspirasi dan sudut pandang baru bagi para pembaca.</p>
+                
+                <div class="contact-info">
+                    <div class="info-item"><i class="fas fa-calendar"></i> 11 November 2006</div>
+                    <div class="info-item"><i class="fab fa-whatsapp"></i> 081218619470</div>
+                    <div class="info-item"><i class="fas fa-envelope"></i>  gya606268@gmail.com</div>
+                </div>
+                
+                <a href="CV GISYA SEKAR FALIHA.pdf" download="CV_Gisya_Sekar_Faliha.pdf" style="margin-top: 20px; background: var(--primary-blue); border: none; color: white; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block;">
+                <i class="fas fa-download"></i> Unduh CV
+                </a>
+            </div>
+        </section>
+
+        <div class="main-grid">
+            <section class="section-box" id="pendidikan">
+                <h2 class="section-title">Riwayat Pendidikan</h2>
+                
+                <div class="history-item">
+                    <div class="icon-box"><i class="fas fa-university"></i></div>
+                    <div>
+                        <h4 style="color: var(--dark-blue);">Universitas Gunadarma</h4>
+                        <h4 style="color: var(--dark-blue);">Manajemen</h4>
+                        <p style="font-size: 0.8rem; color: #888;">2025 - Sekarang</p>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <div class="icon-box"><i class="fas fa-school"></i></div>
+                    <div>
+                        <h4 style="color: var(--dark-blue);">SMAN 3 Kab Tangerang</h4>
+                        <p style="font-size: 0.8rem; color: #888;">2022 - 2025</p>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <div class="icon-box"><i class="fas fa-school"></i></div>
+                    <div>
+                        <h4 style="color: var(--dark-blue);">SMPN 2 Pagedangan</h4>
+                        <p style="font-size: 0.8rem; color: #888;">2019 - 2022</p>
+                    </div>
+                </div>
+                
+                <div class="history-item">
+                    <div class="icon-box"><i class="fas fa-school"></i></div>
+                    <div>
+                        <h4 style="color: var(--dark-blue);">SD NEGERI KAMPUNG BAMBU III</h4>
+                        <p style="font-size: 0.8rem; color: #888;">2013 - 2019</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-box" id="keahlian">
+                <h2 class="section-title">Keahlian Utama</h2>
+                <div style="margin-top: 10px;">
+                    <span class="skill-tag">Microsoft Office</span>
+                    <span class="skill-tag">HTML & CSS</span>
+                    <span class="skill-tag">Desain Grafis</span>
+                    <span class="skill-tag">Content Writing</span>
+                    <span class="skill-tag">Data Analysis</span>
+                </div>
+                
+                <h2 class="section-title" style="margin-top: 30px;">Hobi & Minat</h2>
+                <ul style="list-style: none; padding-left: 5px;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Review Produk</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Edukasi Usaha</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-blue);"></i> Badminton</li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="section-box" style="margin-top: 30px;">
+            <h2 class="section-title">Pengalaman</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
+                
+                <div style="padding: 10px; border: 1px solid var(--light-blue); border-radius: 12px; text-align: center;">
+                    <img src="pengalaman1.jpeg" alt="pengalaman1" style="width: 100%; border-radius: 8px; display: block; object-fit: cover; aspect-ratio: 1/1;">
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">Momen 1</p>
+                </div>
+                
+                <div style="padding: 10px; border: 1px solid var(--light-blue); border-radius: 12px; text-align: center;">
+                    <img src="pengalaman2.jpeg" alt="pengalaman2" style="width: 100%; border-radius: 8px; display: block; object-fit: cover; aspect-ratio: 1/1;">
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">Momen 2</p>
+                </div>
+                
+                <div style="padding: 10px; border: 1px solid var(--light-blue); border-radius: 12px; text-align: center;">
+                    <img src="pengalaman3.jpeg" alt="pengalaman3" style="width: 100%; border-radius: 8px; display: block; object-fit: cover; aspect-ratio: 1/1;">
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">Momen 3</p>
+                </div>
+                
+                <div style="padding: 10px; border: 1px solid var(--light-blue); border-radius: 12px; text-align: center;">
+                    <img src="pengalaman4.jpeg" alt="pengalaman4" style="width: 100%; border-radius: 8px; display: block; object-fit: cover; aspect-ratio: 1/1;">
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">Momen 4</p>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 25px;">
+                <h4 style="color: var(--dark-blue); margin-bottom: 10px;">Kisah di Balik Gambar</h4>
+                <p style="color: var(--text-gray); font-size: 0.95rem; margin-bottom: 10px;">
+Pada saat saya duduk di kelas 12, sekolah kami mengadakan kegiatan study tour yang sangat berkesan. Kami berangkat dari Jakarta bersama teman-teman satu angkatan dengan penuh semangat. Sepanjang perjalanan, suasana di dalam bus sangat ramai dan menyenangkan. Kami bernyanyi, bercanda, dan tidak lupa mengambil foto untuk mengabadikan momen kebersamaan.
+
+Tujuan pertama kami adalah Akademi Kepolisian (AKPOL) Semarang. Setibanya di sana, saya merasa kagum melihat lingkungan yang tertata rapi dan disiplin yang sangat terasa. Kami mendapatkan penjelasan singkat mengenai pendidikan di AKPOL, lalu berkesempatan berkeliling dan berfoto bersama di beberapa spot.
+
+Setelah dari AKPOL, perjalanan dilanjutkan ke Universitas Negeri Semarang (UNNES). Suasana kampus yang hijau dan asri membuat kami merasa nyaman. Udara di sana terasa sejuk, dan kami juga sempat mengikuti sesi pengenalan kampus. Momen berfoto bersama di taman dan depan gedung kampus menjadi salah satu kenangan yang tak terlupakan.
+
+Perjalanan kemudian berlanjut ke Bali, tepatnya ke Universitas Udayana. Di sana, kami tidak hanya mengenal lingkungan kampus, tetapi juga menikmati suasana Bali yang indah. Kami berfoto bersama dengan latar belakang yang menarik dan suasana yang menyenangkan.</p>
+                <p style="color: var(--text-gray); font-size: 0.95rem;">
+Setelah dari Bali, kami melanjutkan perjalanan ke Universitas Brawijaya di Malang. Kampus yang luas dan suasana akademis yang terasa membuat kami semakin termotivasi untuk melanjutkan pendidikan ke jenjang yang lebih tinggi. Kami kembali mengabadikan momen dengan berfoto bersama di berbagai sudut kampus.
+
+Selain berfoto, kami juga sempat berbincang tentang rencana masa depan. Ada yang ingin melanjutkan kuliah di salah satu kampus yang kami kunjungi, ada juga yang memiliki pilihan lain. Meskipun berbeda tujuan, kebersamaan kami tetap terasa hangat.
+
+Setelah seluruh rangkaian kegiatan selesai, kami kembali ke Jakarta. Perjalanan ini memang melelahkan, tetapi sangat menyenangkan dan penuh makna. Kegiatan ini tidak hanya memberikan pengalaman baru, tetapi juga mempererat persahabatan kami.
+
+Semua momen selama perjalanan, terutama saat berfoto bersama di setiap tempat, akan selalu saya ingat sebagai salah satu kenangan terbaik di masa SMA.                </p>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 Gisya Sekar Faliha. Dibuat dengan Dedikasi & Kode.
+    </footer>
+
+</body>
+</html>
